@@ -1,0 +1,32 @@
+SUBDIRS = astro \
+	burstFit \
+	catalogAccess \
+	celestialSources \
+	dataSubselector \
+	embed_python \
+	evtbin \
+	facilities \
+	fitsGen \
+	flux \
+	healpix \
+	irfs \
+	Likelihood \
+	map_tools \
+	observationSim \
+	optimizers \
+	orbitSim \
+	periodSearch \
+	pointlike \
+	pulsarDb \
+	pulsePhase \
+	rspgen \
+	sane \
+	skymaps \
+	st_app \
+	st_facilities \
+	st_graph \
+	st_stream \
+	test-scripts \
+	timeSystem \
+	tip \
+	xmlBase
