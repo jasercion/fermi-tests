@@ -1,2 +1,3 @@
 bin_PROGRAMS = test_microQuasar
 test_microQuasar_SOURCES = test_main.cxx
+AM_LDFLAGS=-lmicroQuasar -lgenericSources -leblAtten -lflux -lst_app -lst_graph -lst_stream -lst_facilities -lastro -lfacilities -ltip -l${CLHEP} -l${CFITSIO} -lwcs-5.16 -lflux -lxmlBase -l${XERCES} -lGRB -lBRBtemplate -lPulsar -lSpectObj -lEarthPhenom -lwcs-5.16 -lfftpack -lsharp -lc_utils -lcxxsupport -lgsl -lgslcblas -lgomp -lhealpix_cxx
