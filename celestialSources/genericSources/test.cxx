@@ -43,10 +43,10 @@ ISpectrumFactory & PulsarFactory();
 ISpectrumFactory & SimpleTransientFactory();
 ISpectrumFactory & SourcePopulationFactory();
 ISpectrumFactory & TransientTemplateFactory();
-#ifndef BUILD_WITHOUT_ROOT
-ISpectrumFactory & TF1SpectrumFactory();
-ISpectrumFactory & TF1MapFactory();
-#endif
+//#ifndef BUILD_WITHOUT_ROOT
+//ISpectrumFactory & TF1SpectrumFactory();
+//ISpectrumFactory & TF1MapFactory();
+//#endif
 ISpectrumFactory & FileSpectrumFactory();
 ISpectrumFactory & FileSpectrumMapFactory();
 ISpectrumFactory & RadialSourceFactory();
@@ -155,10 +155,10 @@ void TestApp::setSources() {
                         "map_cube_source_0",
                         "fits_spectrum",
                         "source_population",
-#ifndef BUILD_WITHOUT_ROOT
-			"tf1spectrum_test",
- 			"tf1map_test",
-#endif
+//#ifndef BUILD_WITHOUT_ROOT
+//			"tf1spectrum_test",
+// 			"tf1map_test",
+//#endif
                         "filespectrummap_test",
  			"filespectrum_test",
                         "radial_source",
@@ -225,10 +225,10 @@ void TestApp::load_sources() {
    SimpleTransientFactory();
    SourcePopulationFactory();
    TransientTemplateFactory();
-#ifndef BUILD_WITHOUT_ROOT
-   TF1SpectrumFactory();
-   TF1MapFactory();
-#endif
+//#ifndef BUILD_WITHOUT_ROOT
+//   TF1SpectrumFactory();
+//   TF1MapFactory();
+//#endif
    FileSpectrumFactory();
    FileSpectrumMapFactory();
    RadialSourceFactory();
