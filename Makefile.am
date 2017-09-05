@@ -6,7 +6,6 @@ SUBDIRS = astro \
 	embed_python \
 	evtbin \
 	facilities \
-	fitsGen \
 	flux \
 	healpix \
 	irfs \
