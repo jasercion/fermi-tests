@@ -11,7 +11,6 @@ SUBDIRS = astro \
 	irfs \
 	Likelihood \
 	map_tools \
-	observationSim \
 	optimizers \
 	orbitSim \
 	periodSearch \
