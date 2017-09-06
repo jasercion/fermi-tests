@@ -14,6 +14,7 @@ from os import environ, mkdir, sep, times
 from os.path import exists
 from platform import node
 from shutil import copyfile
+from astropy.io import fits
 from subprocess import CalledProcessError, STDOUT, check_call
 import sys
 
