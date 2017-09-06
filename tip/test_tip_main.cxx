@@ -535,7 +535,7 @@ int main() {
     }
 #endif
     
-#ifndef BUILD_WITHOUT_ROOT
+//#ifndef BUILD_WITHOUT_ROOT
     // Now test Root file access.
  //   my_table = IFileSvc::instance().editTable(facilities::commonUtilities::joinPath(data_dir, "merit.root"), "1", "McEnergy < 2000. && McEnergy > 50.");
 
