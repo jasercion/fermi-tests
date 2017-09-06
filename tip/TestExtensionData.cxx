@@ -21,9 +21,9 @@
 #include "tip/Table.h"
 #include "tip/TipException.h"
 
-#ifndef BUILD_WITHOUT_ROOT
-#include "RootTable.h"
-#endif
+//#ifndef BUILD_WITHOUT_ROOT
+//#include "RootTable.h"
+//#endif
 
 #define MAKE_COMPILATION_FAIL (0)
 
@@ -571,21 +571,21 @@ int TestExtensionData(const std::string & data_dir, int currentStatus) {
 
 
 
-#ifndef BUILD_WITHOUT_ROOT
+//#ifndef BUILD_WITHOUT_ROOT
   // Test error cases for RootTable constructors:
-  TestConstructorErrors<RootTable>("RootTable", data_dir + s_delim + "merit.root", status);
+//  TestConstructorErrors<RootTable>("RootTable", data_dir + s_delim + "merit.root", status);
 
   // BEGIN Test success cases for RootTable constructors.
   // This test object will be used in further tests below so create it at this scope:
-  delete table; table = 0;
+//  delete table; table = 0;
 
-  try {
+//  try {
     // Valid file name, valid extension name:
-    table = new RootTable(data_dir + s_delim + "merit.root", "1");
-    ReportBehavior("success creating RootTable with valid file name and valid extension name", status);
-  } catch(const TipException & x) {
-    ReportError("failure creating RootTable with valid file name and valid extension name", status, x);
-  }
+//    table = new RootTable(data_dir + s_delim + "merit.root", "1");
+//    ReportBehavior("success creating RootTable with valid file name and valid extension name", status);
+//  } catch(const TipException & x) {
+//   ReportError("failure creating RootTable with valid file name and valid extension name", status, x);
+//  }
   // END Test success cases for RootTable constructors.
 
 
@@ -595,28 +595,28 @@ int TestExtensionData(const std::string & data_dir, int currentStatus) {
 
   // BEGIN Test const RootTable methods for a table extension.
   // Skip these tests if table object was not successfully opened above:
-  if (0 == table) {
-    ReportError("table pointer is null; skipping some tests", status);
-  } else {
+//  if (0 == table) {
+//    ReportError("table pointer is null; skipping some tests", status);
+//  } else {
     // Name of the extension type, used in reporting errors:
-    std::string ext_type = "table";
+//    std::string ext_type = "table";
 
     // Note that table points to the primary HDU, which is an table.
     // Use a constant pointer from here on down:
-    const Table * const_ext = table;
+//    const Table * const_ext = table;
 
     // Test operations which should fail for any/all extensions regardless of whether they are tables or tables:
     // The following call generates some errors containing the string "from a const table object"
-    TestCommonErrors(const_ext, ext_type, status);
+//    TestCommonErrors(const_ext, ext_type, status);
 
     // Test table operations which should succeed.
     // Note that keyword access is not supported for Root files.
 
     // Read an entire column, which will involve calling all important functions:
-    TestReadField(const_ext, "McEnergy", "table", status);
+//    TestReadField(const_ext, "McEnergy", "table", status);
   }
   // END Test const RootTable methods for a table extension.
-#endif
+//#endif
 
 
 
