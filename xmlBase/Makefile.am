@@ -6,3 +6,4 @@ test_mem_SOURCES = test_mem.cxx
 test_write_SOURCES = test_write.cxx
 test_parse_SOURCES = test_parse.cxx
 test_altSchema_SOURCES = test_altSchema.cxx
+AM_LDFLAGS= -lxmlBase -l${XERCES} -lfacilities
