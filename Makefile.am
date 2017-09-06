@@ -22,6 +22,6 @@ SUBDIRS = astro \
 	st_graph \
 	st_stream \
 	timeSystem \
-	tip \
 	xmlBase \
+	tip \
 	test-scripts 
