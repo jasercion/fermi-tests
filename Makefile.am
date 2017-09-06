@@ -14,7 +14,6 @@ SUBDIRS = astro \
 	optimizers \
 	orbitSim \
 	periodSearch \
-	pointlike \
 	pulsarDb \
 	pulsePhase \
 	rspgen \
