@@ -48,7 +48,7 @@ FAIL = 1
 #******************************************************************************
 
 # Utility functions for tests.
-    
+
 # Check a list of files for existence. If one or more are not found,
 # return FAIL. Otherwise, return OK.
 def exists_mass(files):
@@ -130,21 +130,22 @@ def diff_mass(files, outref):
 
 #------------------------------------------------------------------------------
 
-# Compare 2 FITS files using ftdiff. Return OK on success (ftdiff
-# returns 0), or the exit code from ftdiff if non-zero.
+# Compare 2 FITS files using astropy fitsdiff. Return TRUE on success
+# or FALSE otherwise.
 def ftdiff(f1, f2, **kwargs):
-    status = OK
-    cmd = "ftdiff chatter=0 %s %s" % (f1, f2)
+    exclude = []
+    reltol = 0.0
+    tolerance = 0.0
+    # cmd = "ftdiff chatter=0 %s %s" % (f1, f2)
     for (kw, val) in kwargs.items():
         if val != "":
-            cmd += " " + "=".join([kw, val])
-        else:
-            cmd += " " + kw
-    try:
-        check_call(cmd, shell = True, stdout = sys.stdout, stderr = STDOUT)
-    except CalledProcessError, e:
-        status = e.returncode
-    return status
+            exclude = [val] if kw == 'exclude'
+            tolerance = val if kw == 'tolerance'
+            reltol = val if kw == 'reltol'
+
+    fd = fits.FITSDiff(f1, f2, ignore_keywords=exclude, rtol = reltol,
+            atol = tolerance)
+    return fd.identical
 
 # Run ftdiff on a set of files, with reference versions in outref. If
 # one or more files fails the comparison, return FAIL. Otherwise,
