@@ -614,7 +614,7 @@ int TestExtensionData(const std::string & data_dir, int currentStatus) {
 
     // Read an entire column, which will involve calling all important functions:
 //    TestReadField(const_ext, "McEnergy", "table", status);
-  }
+//  }
   // END Test const RootTable methods for a table extension.
 //#endif
 
