@@ -17,7 +17,6 @@ SUBDIRS = astro \
 	pulsarDb \
 	pulsePhase \
 	rspgen \
-	skymaps \
 	st_app \
 	st_facilities \
 	st_graph \
