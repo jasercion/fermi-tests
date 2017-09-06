@@ -537,67 +537,67 @@ int main() {
     
 #ifndef BUILD_WITHOUT_ROOT
     // Now test Root file access.
-    my_table = IFileSvc::instance().editTable(facilities::commonUtilities::joinPath(data_dir, "merit.root"), "1", "McEnergy < 2000. && McEnergy > 50.");
+ //   my_table = IFileSvc::instance().editTable(facilities::commonUtilities::joinPath(data_dir, "merit.root"), "1", "McEnergy < 2000. && McEnergy > 50.");
 
     // Confirm that the temporary file exists.
-    if (use_tmp_file) {
+ //   if (use_tmp_file) {
       // if (!s_fileExists(tmp_file)) {
       //   status = 1;
       //   std::cerr << "Unexpected: editing merit.root with a filter did not create file " << tmp_file << std::endl;
       // }
-    }
+  //  }
 
     // This should work:
-    Header & header = my_table->getHeader();
+  //  Header & header = my_table->getHeader();
 
     // Accessing keywords should not work:
-    try {
-      double x;
-      header["keyword"].get(x);
-    } catch(const TipException &) {
+  //  try {
+  //    double x;
+  //    header["keyword"].get(x);
+  //  } catch(const TipException &) {
       // This is as it should be.
-    }
+  //  }
 
-    try {
-      double x = 7.;
-      header["keyword"].set(x);
-    } catch(const TipException &) {
+  //  try {
+  //    double x = 7.;
+  //    header["keyword"].set(x);
+  //  } catch(const TipException &) {
       // This is as it should be.
-    }
+  //  }
 
-    try {
-      int recordNum = 0;
+  //  try {
+  //    int recordNum = 0;
 
-      Table::Iterator itor = my_table->begin();
+  //    Table::Iterator itor = my_table->begin();
 
-      Table::Record & r = *itor;
+  //    Table::Record & r = *itor;
 
       // Make local aliases to hold two fields from the file. These variables are bound to the Iterator's
       // referent Table::Record object.
-      Table::Scalar<double> McEnergy = r["McEnergy"];
-      Table::Scalar<double> McCharge = r["McCharge"];
+  //    Table::Scalar<double> McEnergy = r["McEnergy"];
+  //    Table::Scalar<double> McCharge = r["McCharge"];
 
       // Show the columns.
-      for (;itor != my_table->end(); ++itor) {
-        std::cout << "*     " << recordNum++ << " *      " << McEnergy << " *      " << McCharge << std::endl;
-      }
+  //    for (;itor != my_table->end(); ++itor) {
+  //      std::cout << "*     " << recordNum++ << " *      " << McEnergy << " *      " << McCharge << std::endl;
+  //    }
 
-    } catch(const TipException & x) {
-      std::cerr << "Unexpected exception while reading through the iterator into Scalar for Root file: " <<
-        x.what() << std::endl;
-      status = 1;
-    }
+  //  } catch(const TipException & x) {
+  //    std::cerr << "Unexpected exception while reading through the iterator into Scalar for Root file: " <<
+  //      x.what() << std::endl;
+  //    status = 1;
+  //  }
 
-    delete my_table; my_table = 0;
+  //  delete my_table; my_table = 0;
 
     // Confirm that the temporary file was deleted when the table was deleted.
-    if (use_tmp_file) {
-      if (s_fileExists(tmp_file)) {
-        status = 1;
-        std::cerr << "Unexpected: deleting Root table did not remove file " << tmp_file << std::endl;
-      }
-    }
-#endif
+ //   if (use_tmp_file) {
+ //     if (s_fileExists(tmp_file)) {
+ //       status = 1;
+ //       std::cerr << "Unexpected: deleting Root table did not remove file " << tmp_file << std::endl;
+ //     }
+ //   }
+//#endif
 
     try {
       // Test creating a new (FITS) file using ft1.tpl:
