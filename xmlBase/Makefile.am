@@ -1,2 +1,8 @@
-bin_PROGRAMS = test_xmlBase
-test_xmlBase_SOURCES = entity_test.cxx  main.cxx test_altSchema.cxx  test_IFile.cxx  test_mem.cxx  test_parse.cxx  test_write.cxx
+bin_PROGRAMS = entity_test test_xmlBase test_IFile test_mem test_parse test_write test_altSchema
+entity_test_SOURCES = entity_test.cxx
+test_xmlBase_SOURCES = main.cxx
+test_IFile_SOURCES = test_IFile.cxx  
+test_mem_SOURCES = test_mem.cxx
+test_write_SOURCES = test_write.cxx
+test_parse_SOURCES = test_parse.cxx
+test_altSchema_SOURCES = test_altSchema.cxx
