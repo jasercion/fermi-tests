@@ -18,9 +18,9 @@
 #include "tip/Table.h"
 #include "tip/tip_types.h"
 
-#ifndef BUILD_WITHOUT_ROOT
-#include "RootTable.h"
-#endif
+//#ifndef BUILD_WITHOUT_ROOT
+//#include "RootTable.h"
+//#endif
 
 #define MAKE_COMPILATION_FAIL (0)
 
@@ -100,29 +100,29 @@ namespace tip {
       ReportWarning("FITS table tests will be skipped!");
     }
 
-#ifndef BUILD_WITHOUT_ROOT
+//#ifndef BUILD_WITHOUT_ROOT
     // Test constructing a Root table:
-    msg = std::string("opening TTree \"1\" extension of ") + data_dir + "merit.root";
-    try {
-      Table * data = new RootTable(data_dir + "merit.root", "1");
-      m_root_table = data;
-      ReportExpected(msg + " succeeded");
-    } catch(const TipException & x) {
-      ReportUnexpected(msg + " failed", x);
-      ReportWarning("Root table tests will be skipped!");
-    }
+//    msg = std::string("opening TTree \"1\" extension of ") + data_dir + "merit.root";
+//    try {
+//      Table * data = new RootTable(data_dir + "merit.root", "1");
+//      m_root_table = data;
+//      ReportExpected(msg + " succeeded");
+//    } catch(const TipException & x) {
+//      ReportUnexpected(msg + " failed", x);
+//      ReportWarning("Root table tests will be skipped!");
+//    }
 
     // Test constructing a Root FT2 table:
-    msg = std::string("opening TTree \"pointing_history\" extension of ") + data_dir + "FT2.root";
-    try {
-      Table * data = new RootTable(data_dir + "FT2.root", "pointing_history");
-      m_root_ft2 = data;
-      ReportExpected(msg + " succeeded");
-    } catch(const TipException & x) {
-      ReportUnexpected(msg + " failed", x);
-      ReportWarning("Root FT2 table tests will be skipped!");
-    }
-#endif
+//    msg = std::string("opening TTree \"pointing_history\" extension of ") + data_dir + "FT2.root";
+//    try {
+//      Table * data = new RootTable(data_dir + "FT2.root", "pointing_history");
+//      m_root_ft2 = data;
+//      ReportExpected(msg + " succeeded");
+//    } catch(const TipException & x) {
+//      ReportUnexpected(msg + " failed", x);
+//      ReportWarning("Root FT2 table tests will be skipped!");
+//    }
+//#endif
   }
 
   void TestTable::getValidFieldsTest() {
