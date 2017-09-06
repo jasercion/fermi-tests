@@ -10,9 +10,9 @@
 
 #include "FitsFileManager.h"
 #include "FitsTipFile.h"
-#ifndef BUILD_WITHOUT_ROOT
-#include "RootTable.h"
-#endif
+//#ifndef BUILD_WITHOUT_ROOT
+//#include "RootTable.h"
+//#endif
 #include "TestFileManager.h"
 #include "tip/Extension.h"
 #include "tip/FileSummary.h"
@@ -251,28 +251,28 @@ namespace tip {
       else
         ReportExpected(std::string("FitsFileManager::isValid correctly failed to recognize file ") + file);
 
-#ifndef BUILD_WITHOUT_ROOT
+//#ifndef BUILD_WITHOUT_ROOT
       // Test RootTable's ability to classify a Root file.
-      file = data_dir + "merit.root";
-      if (RootTable::isValid(file))
-        ReportExpected(std::string("RootTable::isValid correctly recognized Root file ") + file);
-      else
-        ReportUnexpected(std::string("RootTable::isValid incorrectly failed to recognize Root file ") + file);
+//      file = data_dir + "merit.root";
+//      if (RootTable::isValid(file))
+//        ReportExpected(std::string("RootTable::isValid correctly recognized Root file ") + file);
+//      else
+//        ReportUnexpected(std::string("RootTable::isValid incorrectly failed to recognize Root file ") + file);
 
       // Next try nonexistent file.
-      file = data_dir + "non_existent.pha";
-      if (RootTable::isValid(file))
-        ReportUnexpected(std::string("RootTable::isValid incorrectly recognized file ") + file);
-      else
-        ReportExpected(std::string("RootTable::isValid correctly failed to recognize file ") + file);
+//      file = data_dir + "non_existent.pha";
+//      if (RootTable::isValid(file))
+//        ReportUnexpected(std::string("RootTable::isValid incorrectly recognized file ") + file);
+//      else
+//        ReportExpected(std::string("RootTable::isValid correctly failed to recognize file ") + file);
 
       // Next try Fits file.
-      file = data_dir + "a1.pha";
-      if (RootTable::isValid(file))
-        ReportUnexpected(std::string("RootTable::isValid incorrectly recognized file ") + file);
-      else
-        ReportExpected(std::string("RootTable::isValid correctly failed to recognize file ") + file);
-#endif
+ //     file = data_dir + "a1.pha";
+ //     if (RootTable::isValid(file))
+ //       ReportUnexpected(std::string("RootTable::isValid incorrectly recognized file ") + file);
+ //     else
+ //       ReportExpected(std::string("RootTable::isValid correctly failed to recognize file ") + file);
+//#endif
 
     } catch (const TipException & x) {
       ReportUnexpected("TestFileManager::fileStatusTest caught unexpected exception while testing properties of " + file, x);
