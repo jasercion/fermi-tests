@@ -107,5 +107,6 @@ AC_CONFIG_FILES([Likelihood/Makefile
                  st_stream/Makefile
                  timeSystem/Makefile
                  tip/Makefile
+		 test-scripts/Makefile
                  xmlBase/Makefile])
 AC_OUTPUT
