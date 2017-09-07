@@ -1,10 +1,4 @@
-HD_COMPONENT_NAME       = glast
-
-HD_COMPONENT_VERS       =
-
-HD_REFDATA_SUBDIR       = fermi/test-scripts/outref
-
-HD_TEST_REFDATA         = _3c84_ExpCube.fits \
+dist_data_REFDATA         = _3c84_ExpCube.fits \
                           _3c84_sim_events_0000.fits \
                           counts_spectra.fits \
                           _3c84_ExpMap.fits \
@@ -34,5 +28,3 @@ HD_TEST_REFDATA         = _3c84_ExpCube.fits \
                           gtpsearch-out.fits \
                           gtpspec-out.fits \
                           gtptest-out.fits
-
-include ${HD_STD_MAKEFILE}
