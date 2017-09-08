@@ -1,3 +1,4 @@
+SUBDIRS	= data
 bin_PROGRAMS = entity_test test_xmlBase test_IFile test_mem test_parse test_write test_altSchema
 entity_test_SOURCES = entity_test.cxx
 test_xmlBase_SOURCES = main.cxx
