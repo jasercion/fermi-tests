@@ -1,10 +1,4 @@
-HD_COMPONENT_NAME       = glast
-
-HD_COMPONENT_VERS       =
-
-HD_REFDATA_SUBDIR       = fermi/pulsarDb/outref
-
-HD_TEST_REFDATA         = chooser_db.fits \
+dist_data_DATA 				=  chooser_db.fits \
                           crab_db.fits \
                           f2not0_db.fits \
                           j0323_db.fits \
@@ -87,5 +81,3 @@ HD_TEST_REFDATA         = chooser_db.fits \
                           testdb.txt \
                           time_db.fits \
                           twice_db.fits \
-
-include ${HD_STD_MAKEFILE}
