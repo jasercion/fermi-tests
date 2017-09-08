@@ -80,4 +80,4 @@ dist_data_DATA 				=  chooser_db.fits \
                           testdb.fits \
                           testdb.txt \
                           time_db.fits \
-                          twice_db.fits \
+                          twice_db.fits 

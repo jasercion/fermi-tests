@@ -251,6 +251,7 @@ top_build_prefix = ../
 top_builddir = ..
 top_srcdir = ..
 test_st_app_SOURCES = test_main.cxx
+AM_LDFLAGS = -lst_app -l${PYTHON} -lst_graph -lst_stream -lfacilities -l${HOOPS} -l${PIL} -l${CFITSIO} -l${READLINE}
 all: all-am
 
 .SUFFIXES:

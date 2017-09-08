@@ -96,7 +96,7 @@ am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \
  configure.lineno config.status.lineno
 mkinstalldirs = $(install_sh) -d
 CONFIG_HEADER = config.h
-CONFIG_CLEAN_FILES =
+CONFIG_CLEAN_FILES = rspgen/data/Makefile
 CONFIG_CLEAN_VPATH_FILES =
 AM_V_P = $(am__v_P_$(V))
 am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
@@ -155,8 +155,9 @@ ETAGS = etags
 CTAGS = ctags
 CSCOPE = cscope
 DIST_SUBDIRS = $(SUBDIRS)
-am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/config.h.in compile \
-	depcomp install-sh missing
+am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/config.h.in \
+	$(top_srcdir)/rspgen/data/Makefile.in compile depcomp \
+	install-sh missing
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 distdir = $(PACKAGE)-$(VERSION)
 top_distdir = $(distdir)
@@ -298,30 +299,25 @@ SUBDIRS = astro \
 	embed_python \
 	evtbin \
 	facilities \
-	fitsGen \
 	flux \
 	healpix \
 	irfs \
 	Likelihood \
 	map_tools \
-	observationSim \
 	optimizers \
 	orbitSim \
 	periodSearch \
-	pointlike \
 	pulsarDb \
 	pulsePhase \
 	rspgen \
-	sane \
-	skymaps \
 	st_app \
 	st_facilities \
 	st_graph \
 	st_stream \
-	test-scripts \
 	timeSystem \
+	xmlBase \
 	tip \
-	xmlBase
+	test-scripts 
 
 all: config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
@@ -375,6 +371,8 @@ $(srcdir)/config.h.in:  $(am__configure_deps)
 
 distclean-hdr:
 	-rm -f config.h stamp-h1
+rspgen/data/Makefile: $(top_builddir)/config.status $(top_srcdir)/rspgen/data/Makefile.in
+	cd $(top_builddir) && $(SHELL) ./config.status $@
 
 # This directory's subdirectories are mostly independent; you can cd
 # into them and run 'make' without going through this Makefile.

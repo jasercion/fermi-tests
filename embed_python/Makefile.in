@@ -251,6 +251,7 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 test_embed_python_SOURCES = runPy.cxx
+AM_LDFLAGS = -lembed_python -l${PYTHON}
 all: all-am
 
 .SUFFIXES:

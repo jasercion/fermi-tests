@@ -5996,7 +5996,7 @@ fi
 done
 
 
-ac_config_files="$ac_config_files Likelihood/Makefile Makefile astro/Makefile burstFit/Makefile catalogAccess/Makefile celestialSources/EarthPhenom/Makefile celestialSources/GRBobs/Makefile celestialSources/GRBtemplate/Makefile celestialSources/Makefile celestialSources/eblAtten/Makefile celestialSources/genericSources/Makefile celestialSources/microQuasar/Makefile dataSubselector/Makefile embed_python/Makefile evtbin/Makefile facilities/Makefile fitsGen/Makefile flux/Makefile healpix/Makefile irfs/Makefile irfs/dc1aResponse/Makefile irfs/irfInterface/Makefile irfs/irfLoader/Makefile irfs/irfUtil/Makefile irfs/latResponse/Makefile irfs/testResponse/Makefile map_tools/Makefile observationSim/Makefile optimizers/Makefile orbitSim/Makefile periodSearch/Makefile pointlike/Makefile pulsarDb/Makefile pulsePhase/Makefile rspgen/Makefile skymaps/Makefile st_app/Makefile st_facilities/Makefile st_graph/Makefile st_stream/Makefile timeSystem/Makefile tip/Makefile test-scripts/Makefile test-scripts/data/Makefile test-scripts/data/outref/Makefile xmlBase/Makefile"
+ac_config_files="$ac_config_files Likelihood/Makefile Makefile astro/Makefile astro/data/Makefile burstFit/Makefile burstFit/data/Makefile catalogAccess/Makefile catalogAccess/data/Makefile catalogAccess/data/outref/Makefile celestialSources/EarthPhenom/Makefile celestialSources/GRBobs/Makefile celestialSources/GRBobs/data/Makefile celestialSources/GRBobs/data/outref/Makefile celestialSources/GRBtemplate/Makefile celestialSources/GRBtemplate/data/outref/Makefile celestialSources/GRBtemplate/data/Makefile celestialSources/Makefile celestialSources/eblAtten/Makefile celestialSources/eblAtten/data/Makefile celestialSources/genericSources/Makefile celestialSources/genericSources/data/Makefile celestialSources/genericSources/data/outref/Makefile celestialSources/microQuasar/Makefile dataSubselector/Makefile dataSubselector/data/Makefile dataSubselector/data/outref/Makefile embed_python/Makefile evtbin/Makefile evtbin/data/Makefile evtbin/data/outref/Makefile facilities/Makefile fitsGen/Makefile fitsGen/data/Makefile flux/Makefile flux/data/Makefile flux/data/outref/Makefile healpix/Makefile healpix/data/Makefile irfs/Makefile irfs/dc1aResponse/Makefile irfs/dc1aResponse/data/Makefile irfs/dc1aResponse/data/outref/Makefile irfs/irfInterface/Makefile irfs/irfLoader/Makefile irfs/irfUtil/Makefile irfs/latResponse/Makefile irfs/latResponse/data/Makefile irfs/testResponse/Makefile irfs/testResponse/data/Makefile irfs/testResponse/data/outref/Makefile map_tools/Makefile map_tools/data/Makefile map_tools/data/outref/Makefile observationSim/Makefile observationSim/data/Makefile observationSim/data/outref/Makefile optimizers/Makefile optimizers/data/Makefile optimizers/data/outref/Makefile orbitSim/Makefile orbitSim/data/Makefile periodSearch/Makefile periodSearch/data/Makefile periodSearch/data/outref/Makefile pointlike/Makefile pointlike/data/Makefile pulsarDb/Makefile pulsarDb/data/Makefile pulsarDb/data/outref/Makefile pulsePhase/Makefile pulsePhase/data/Makefile pulsePhase/data/outref/Makefile rspgen/Makefile rspgen/data/Makefile rspgen/data/outref/Makefile skymaps/Makefile skymaps/data/Makefile st_app/Makefile st_facilities/Makefile st_graph/Makefile st_stream/Makefile st_stream/data/Makefile st_stream/data/outref/Makefile timeSystem/Makefile timeSystem/data/Makefile timeSystem/data/outref/Makefile tip/Makefile tip/data/Makefile tip/data/outref/Makefile test-scripts/Makefile test-scripts/data/Makefile test-scripts/data/outref/Makefile xmlBase/Makefile xmlBase/data/Makefile xmlBase/data/outref/Makefile"
 
 cat >confcache <<\_ACEOF
 # This file is a shell script that caches the results of configure
@@ -6732,49 +6732,98 @@ do
     "Likelihood/Makefile") CONFIG_FILES="$CONFIG_FILES Likelihood/Makefile" ;;
     "Makefile") CONFIG_FILES="$CONFIG_FILES Makefile" ;;
     "astro/Makefile") CONFIG_FILES="$CONFIG_FILES astro/Makefile" ;;
+    "astro/data/Makefile") CONFIG_FILES="$CONFIG_FILES astro/data/Makefile" ;;
     "burstFit/Makefile") CONFIG_FILES="$CONFIG_FILES burstFit/Makefile" ;;
+    "burstFit/data/Makefile") CONFIG_FILES="$CONFIG_FILES burstFit/data/Makefile" ;;
     "catalogAccess/Makefile") CONFIG_FILES="$CONFIG_FILES catalogAccess/Makefile" ;;
+    "catalogAccess/data/Makefile") CONFIG_FILES="$CONFIG_FILES catalogAccess/data/Makefile" ;;
+    "catalogAccess/data/outref/Makefile") CONFIG_FILES="$CONFIG_FILES catalogAccess/data/outref/Makefile" ;;
     "celestialSources/EarthPhenom/Makefile") CONFIG_FILES="$CONFIG_FILES celestialSources/EarthPhenom/Makefile" ;;
     "celestialSources/GRBobs/Makefile") CONFIG_FILES="$CONFIG_FILES celestialSources/GRBobs/Makefile" ;;
+    "celestialSources/GRBobs/data/Makefile") CONFIG_FILES="$CONFIG_FILES celestialSources/GRBobs/data/Makefile" ;;
+    "celestialSources/GRBobs/data/outref/Makefile") CONFIG_FILES="$CONFIG_FILES celestialSources/GRBobs/data/outref/Makefile" ;;
     "celestialSources/GRBtemplate/Makefile") CONFIG_FILES="$CONFIG_FILES celestialSources/GRBtemplate/Makefile" ;;
+    "celestialSources/GRBtemplate/data/outref/Makefile") CONFIG_FILES="$CONFIG_FILES celestialSources/GRBtemplate/data/outref/Makefile" ;;
+    "celestialSources/GRBtemplate/data/Makefile") CONFIG_FILES="$CONFIG_FILES celestialSources/GRBtemplate/data/Makefile" ;;
     "celestialSources/Makefile") CONFIG_FILES="$CONFIG_FILES celestialSources/Makefile" ;;
     "celestialSources/eblAtten/Makefile") CONFIG_FILES="$CONFIG_FILES celestialSources/eblAtten/Makefile" ;;
+    "celestialSources/eblAtten/data/Makefile") CONFIG_FILES="$CONFIG_FILES celestialSources/eblAtten/data/Makefile" ;;
     "celestialSources/genericSources/Makefile") CONFIG_FILES="$CONFIG_FILES celestialSources/genericSources/Makefile" ;;
+    "celestialSources/genericSources/data/Makefile") CONFIG_FILES="$CONFIG_FILES celestialSources/genericSources/data/Makefile" ;;
+    "celestialSources/genericSources/data/outref/Makefile") CONFIG_FILES="$CONFIG_FILES celestialSources/genericSources/data/outref/Makefile" ;;
     "celestialSources/microQuasar/Makefile") CONFIG_FILES="$CONFIG_FILES celestialSources/microQuasar/Makefile" ;;
     "dataSubselector/Makefile") CONFIG_FILES="$CONFIG_FILES dataSubselector/Makefile" ;;
+    "dataSubselector/data/Makefile") CONFIG_FILES="$CONFIG_FILES dataSubselector/data/Makefile" ;;
+    "dataSubselector/data/outref/Makefile") CONFIG_FILES="$CONFIG_FILES dataSubselector/data/outref/Makefile" ;;
     "embed_python/Makefile") CONFIG_FILES="$CONFIG_FILES embed_python/Makefile" ;;
     "evtbin/Makefile") CONFIG_FILES="$CONFIG_FILES evtbin/Makefile" ;;
+    "evtbin/data/Makefile") CONFIG_FILES="$CONFIG_FILES evtbin/data/Makefile" ;;
+    "evtbin/data/outref/Makefile") CONFIG_FILES="$CONFIG_FILES evtbin/data/outref/Makefile" ;;
     "facilities/Makefile") CONFIG_FILES="$CONFIG_FILES facilities/Makefile" ;;
     "fitsGen/Makefile") CONFIG_FILES="$CONFIG_FILES fitsGen/Makefile" ;;
+    "fitsGen/data/Makefile") CONFIG_FILES="$CONFIG_FILES fitsGen/data/Makefile" ;;
     "flux/Makefile") CONFIG_FILES="$CONFIG_FILES flux/Makefile" ;;
+    "flux/data/Makefile") CONFIG_FILES="$CONFIG_FILES flux/data/Makefile" ;;
+    "flux/data/outref/Makefile") CONFIG_FILES="$CONFIG_FILES flux/data/outref/Makefile" ;;
     "healpix/Makefile") CONFIG_FILES="$CONFIG_FILES healpix/Makefile" ;;
+    "healpix/data/Makefile") CONFIG_FILES="$CONFIG_FILES healpix/data/Makefile" ;;
     "irfs/Makefile") CONFIG_FILES="$CONFIG_FILES irfs/Makefile" ;;
     "irfs/dc1aResponse/Makefile") CONFIG_FILES="$CONFIG_FILES irfs/dc1aResponse/Makefile" ;;
+    "irfs/dc1aResponse/data/Makefile") CONFIG_FILES="$CONFIG_FILES irfs/dc1aResponse/data/Makefile" ;;
+    "irfs/dc1aResponse/data/outref/Makefile") CONFIG_FILES="$CONFIG_FILES irfs/dc1aResponse/data/outref/Makefile" ;;
     "irfs/irfInterface/Makefile") CONFIG_FILES="$CONFIG_FILES irfs/irfInterface/Makefile" ;;
     "irfs/irfLoader/Makefile") CONFIG_FILES="$CONFIG_FILES irfs/irfLoader/Makefile" ;;
     "irfs/irfUtil/Makefile") CONFIG_FILES="$CONFIG_FILES irfs/irfUtil/Makefile" ;;
     "irfs/latResponse/Makefile") CONFIG_FILES="$CONFIG_FILES irfs/latResponse/Makefile" ;;
+    "irfs/latResponse/data/Makefile") CONFIG_FILES="$CONFIG_FILES irfs/latResponse/data/Makefile" ;;
     "irfs/testResponse/Makefile") CONFIG_FILES="$CONFIG_FILES irfs/testResponse/Makefile" ;;
+    "irfs/testResponse/data/Makefile") CONFIG_FILES="$CONFIG_FILES irfs/testResponse/data/Makefile" ;;
+    "irfs/testResponse/data/outref/Makefile") CONFIG_FILES="$CONFIG_FILES irfs/testResponse/data/outref/Makefile" ;;
     "map_tools/Makefile") CONFIG_FILES="$CONFIG_FILES map_tools/Makefile" ;;
+    "map_tools/data/Makefile") CONFIG_FILES="$CONFIG_FILES map_tools/data/Makefile" ;;
+    "map_tools/data/outref/Makefile") CONFIG_FILES="$CONFIG_FILES map_tools/data/outref/Makefile" ;;
     "observationSim/Makefile") CONFIG_FILES="$CONFIG_FILES observationSim/Makefile" ;;
+    "observationSim/data/Makefile") CONFIG_FILES="$CONFIG_FILES observationSim/data/Makefile" ;;
+    "observationSim/data/outref/Makefile") CONFIG_FILES="$CONFIG_FILES observationSim/data/outref/Makefile" ;;
     "optimizers/Makefile") CONFIG_FILES="$CONFIG_FILES optimizers/Makefile" ;;
+    "optimizers/data/Makefile") CONFIG_FILES="$CONFIG_FILES optimizers/data/Makefile" ;;
+    "optimizers/data/outref/Makefile") CONFIG_FILES="$CONFIG_FILES optimizers/data/outref/Makefile" ;;
     "orbitSim/Makefile") CONFIG_FILES="$CONFIG_FILES orbitSim/Makefile" ;;
+    "orbitSim/data/Makefile") CONFIG_FILES="$CONFIG_FILES orbitSim/data/Makefile" ;;
     "periodSearch/Makefile") CONFIG_FILES="$CONFIG_FILES periodSearch/Makefile" ;;
+    "periodSearch/data/Makefile") CONFIG_FILES="$CONFIG_FILES periodSearch/data/Makefile" ;;
+    "periodSearch/data/outref/Makefile") CONFIG_FILES="$CONFIG_FILES periodSearch/data/outref/Makefile" ;;
     "pointlike/Makefile") CONFIG_FILES="$CONFIG_FILES pointlike/Makefile" ;;
+    "pointlike/data/Makefile") CONFIG_FILES="$CONFIG_FILES pointlike/data/Makefile" ;;
     "pulsarDb/Makefile") CONFIG_FILES="$CONFIG_FILES pulsarDb/Makefile" ;;
+    "pulsarDb/data/Makefile") CONFIG_FILES="$CONFIG_FILES pulsarDb/data/Makefile" ;;
+    "pulsarDb/data/outref/Makefile") CONFIG_FILES="$CONFIG_FILES pulsarDb/data/outref/Makefile" ;;
     "pulsePhase/Makefile") CONFIG_FILES="$CONFIG_FILES pulsePhase/Makefile" ;;
+    "pulsePhase/data/Makefile") CONFIG_FILES="$CONFIG_FILES pulsePhase/data/Makefile" ;;
+    "pulsePhase/data/outref/Makefile") CONFIG_FILES="$CONFIG_FILES pulsePhase/data/outref/Makefile" ;;
     "rspgen/Makefile") CONFIG_FILES="$CONFIG_FILES rspgen/Makefile" ;;
+    "rspgen/data/Makefile") CONFIG_FILES="$CONFIG_FILES rspgen/data/Makefile" ;;
+    "rspgen/data/outref/Makefile") CONFIG_FILES="$CONFIG_FILES rspgen/data/outref/Makefile" ;;
     "skymaps/Makefile") CONFIG_FILES="$CONFIG_FILES skymaps/Makefile" ;;
+    "skymaps/data/Makefile") CONFIG_FILES="$CONFIG_FILES skymaps/data/Makefile" ;;
     "st_app/Makefile") CONFIG_FILES="$CONFIG_FILES st_app/Makefile" ;;
     "st_facilities/Makefile") CONFIG_FILES="$CONFIG_FILES st_facilities/Makefile" ;;
     "st_graph/Makefile") CONFIG_FILES="$CONFIG_FILES st_graph/Makefile" ;;
     "st_stream/Makefile") CONFIG_FILES="$CONFIG_FILES st_stream/Makefile" ;;
+    "st_stream/data/Makefile") CONFIG_FILES="$CONFIG_FILES st_stream/data/Makefile" ;;
+    "st_stream/data/outref/Makefile") CONFIG_FILES="$CONFIG_FILES st_stream/data/outref/Makefile" ;;
     "timeSystem/Makefile") CONFIG_FILES="$CONFIG_FILES timeSystem/Makefile" ;;
+    "timeSystem/data/Makefile") CONFIG_FILES="$CONFIG_FILES timeSystem/data/Makefile" ;;
+    "timeSystem/data/outref/Makefile") CONFIG_FILES="$CONFIG_FILES timeSystem/data/outref/Makefile" ;;
     "tip/Makefile") CONFIG_FILES="$CONFIG_FILES tip/Makefile" ;;
+    "tip/data/Makefile") CONFIG_FILES="$CONFIG_FILES tip/data/Makefile" ;;
+    "tip/data/outref/Makefile") CONFIG_FILES="$CONFIG_FILES tip/data/outref/Makefile" ;;
     "test-scripts/Makefile") CONFIG_FILES="$CONFIG_FILES test-scripts/Makefile" ;;
     "test-scripts/data/Makefile") CONFIG_FILES="$CONFIG_FILES test-scripts/data/Makefile" ;;
     "test-scripts/data/outref/Makefile") CONFIG_FILES="$CONFIG_FILES test-scripts/data/outref/Makefile" ;;
     "xmlBase/Makefile") CONFIG_FILES="$CONFIG_FILES xmlBase/Makefile" ;;
+    "xmlBase/data/Makefile") CONFIG_FILES="$CONFIG_FILES xmlBase/data/Makefile" ;;
+    "xmlBase/data/outref/Makefile") CONFIG_FILES="$CONFIG_FILES xmlBase/data/outref/Makefile" ;;
 
   *) as_fn_error $? "invalid argument: \`$ac_config_target'" "$LINENO" 5;;
   esac

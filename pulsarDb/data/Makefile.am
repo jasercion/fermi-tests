@@ -73,4 +73,4 @@ dist_data_DATA 				=   PulsarDb.tpl \
                           testpsrdb_text.fits \
                           timeformat_glast.tpl \
                           wrongdb_binary.txt \
-                          wrongdb_spin.txt \
+                          wrongdb_spin.txt 

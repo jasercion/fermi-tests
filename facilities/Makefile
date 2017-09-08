@@ -86,7 +86,7 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-bin_PROGRAMS = test_facilities$(EXEEXT)
+bin_PROGRAMS = test_env$(EXEEXT) test_time$(EXEEXT) test_Util$(EXEEXT)
 subdir = facilities
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/configure.ac
@@ -99,10 +99,15 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
-am_test_facilities_OBJECTS = test_env.$(OBJEXT) test_time.$(OBJEXT) \
-	testUtil.$(OBJEXT)
-test_facilities_OBJECTS = $(am_test_facilities_OBJECTS)
-test_facilities_LDADD = $(LDADD)
+am_test_Util_OBJECTS = testUtil.$(OBJEXT)
+test_Util_OBJECTS = $(am_test_Util_OBJECTS)
+test_Util_LDADD = $(LDADD)
+am_test_env_OBJECTS = test_env.$(OBJEXT)
+test_env_OBJECTS = $(am_test_env_OBJECTS)
+test_env_LDADD = $(LDADD)
+am_test_time_OBJECTS = test_time.$(OBJEXT)
+test_time_OBJECTS = $(am_test_time_OBJECTS)
+test_time_LDADD = $(LDADD)
 AM_V_P = $(am__v_P_$(V))
 am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
 am__v_P_0 = false
@@ -132,8 +137,10 @@ AM_V_CXXLD = $(am__v_CXXLD_$(V))
 am__v_CXXLD_ = $(am__v_CXXLD_$(AM_DEFAULT_VERBOSITY))
 am__v_CXXLD_0 = @echo "  CXXLD   " $@;
 am__v_CXXLD_1 = 
-SOURCES = $(test_facilities_SOURCES)
-DIST_SOURCES = $(test_facilities_SOURCES)
+SOURCES = $(test_Util_SOURCES) $(test_env_SOURCES) \
+	$(test_time_SOURCES)
+DIST_SOURCES = $(test_Util_SOURCES) $(test_env_SOURCES) \
+	$(test_time_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -251,7 +258,10 @@ target_alias =
 top_build_prefix = ../
 top_builddir = ..
 top_srcdir = ..
-test_facilities_SOURCES = test_env.cxx  test_time.cxx  testUtil.cxx
+test_env_SOURCES = test_env.cxx
+test_time_SOURCES = test_time.cxx
+test_Util_SOURCES = testUtil.cxx
+AM_LDFLAGS = -lfacilities
 all: all-am
 
 .SUFFIXES:
@@ -328,9 +338,17 @@ uninstall-binPROGRAMS:
 clean-binPROGRAMS:
 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
 
-test_facilities$(EXEEXT): $(test_facilities_OBJECTS) $(test_facilities_DEPENDENCIES) $(EXTRA_test_facilities_DEPENDENCIES) 
-	@rm -f test_facilities$(EXEEXT)
-	$(AM_V_CXXLD)$(CXXLINK) $(test_facilities_OBJECTS) $(test_facilities_LDADD) $(LIBS)
+test_Util$(EXEEXT): $(test_Util_OBJECTS) $(test_Util_DEPENDENCIES) $(EXTRA_test_Util_DEPENDENCIES) 
+	@rm -f test_Util$(EXEEXT)
+	$(AM_V_CXXLD)$(CXXLINK) $(test_Util_OBJECTS) $(test_Util_LDADD) $(LIBS)
+
+test_env$(EXEEXT): $(test_env_OBJECTS) $(test_env_DEPENDENCIES) $(EXTRA_test_env_DEPENDENCIES) 
+	@rm -f test_env$(EXEEXT)
+	$(AM_V_CXXLD)$(CXXLINK) $(test_env_OBJECTS) $(test_env_LDADD) $(LIBS)
+
+test_time$(EXEEXT): $(test_time_OBJECTS) $(test_time_DEPENDENCIES) $(EXTRA_test_time_DEPENDENCIES) 
+	@rm -f test_time$(EXEEXT)
+	$(AM_V_CXXLD)$(CXXLINK) $(test_time_OBJECTS) $(test_time_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
