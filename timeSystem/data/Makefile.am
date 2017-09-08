@@ -1,10 +1,5 @@
-HD_COMPONENT_NAME       = glast
-
-HD_COMPONENT_VERS       =
-
-HD_REFDATA_SUBDIR       = fermi/timeSystem
-
-HD_TEST_REFDATA         = bogusls.fits \
+SUBDIRS                 = outref
+dist_data_DATA          = bogusls.fits \
                           my_pulsar_events_bary_v3.fits \
                           my_pulsar_events_bary_v3r1.fits \
                           my_pulsar_events_geo_v3.fits \
@@ -29,5 +24,3 @@ HD_TEST_REFDATA         = bogusls.fits \
                           testscfile_lam.fits \
                           testscfile_one.fits \
                           testscfile_std.fits
-
-include ${HD_STD_MAKEFILE}
