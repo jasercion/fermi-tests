@@ -1,16 +1,10 @@
-HD_COMPONENT_NAME       = glast
-
-HD_COMPONENT_VERS       =
-
-HD_INSTALL_REFDATA      = LatCountsMapTemplate \
+SUBDIRS = outref
+dist_data_DATA		= LatCountsMapTemplate \
                           LivetimeCubeTemplate \
                           TsMapTemplate \
                           mapcube.fits \
 			  LatHealpixTemplate
-
-HD_REFDATA_SUBDIR       = fermi/Likelihood
-
-HD_TEST_REFDATA		= Crab_model.xml \
+			  Crab_model.xml \
                           anticenter_expMap.fits \
                           anticenter_model.xml \
                           anticenter_model_2.xml \
@@ -29,5 +23,3 @@ HD_TEST_REFDATA		= Crab_model.xml \
                           gammac_dif.dat \
                           oneday_scData_0000.fits \
                           single_src_events_0000.fits
-
-include ${HD_STD_MAKEFILE}
