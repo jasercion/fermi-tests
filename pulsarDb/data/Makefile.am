@@ -1,12 +1,5 @@
-HD_COMPONENT_NAME       = glast
-
-HD_COMPONENT_VERS       =
-
-HD_INSTALL_REFDATA      = PulsarDb.tpl
-
-HD_REFDATA_SUBDIR       = fermi/pulsarDb
-
-HD_TEST_REFDATA         = PulsarDb.tpl \
+SUBDIRS = outref
+dist_data_DATA 				=   PulsarDb.tpl \
                           PulsarDb.tpl \
                           PulsarDb_orbital_bt.tpl \
                           PulsarDb_orbital_dd.tpl \
@@ -81,5 +74,3 @@ HD_TEST_REFDATA         = PulsarDb.tpl \
                           timeformat_glast.tpl \
                           wrongdb_binary.txt \
                           wrongdb_spin.txt \
-
-include ${HD_STD_MAKEFILE}
