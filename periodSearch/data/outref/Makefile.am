@@ -1,10 +1,4 @@
-HD_COMPONENT_NAME       = glast
-
-HD_COMPONENT_VERS       =
-
-HD_REFDATA_SUBDIR       = fermi/periodSearch/outref
-
-HD_TEST_REFDATA         = artificial-chi-sq.fits \
+dist_data_DATA 				=  artificial-chi-sq.fits \
                           artificial-fourier.fits \
                           artificial-h.fits \
                           artificial-rayleigh.fits \
@@ -38,5 +32,3 @@ HD_TEST_REFDATA         = artificial-chi-sq.fits \
                           testPowerSpectrumApp_par3.ref \
                           testPowerSpectrumApp_par4.log \
                           testPowerSpectrumApp_par4.ref
-
-include ${HD_STD_MAKEFILE}
