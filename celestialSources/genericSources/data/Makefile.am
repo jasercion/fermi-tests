@@ -1,10 +1,6 @@
-HD_COMPONENT_NAME       = glast
+SUBDIRS = outref
 
-HD_COMPONENT_VERS       =
-
-HD_REFDATA_SUBDIR       = fermi/genericSources
-
-HD_TEST_REFDATA         = 3c279Template.dat \
+dist_data_DATA =       = 3c279Template.dat \
                           CrabTemplate.dat \
                           GemingaTemplate.dat \
                           dm120gev.dat \
@@ -16,5 +12,3 @@ HD_TEST_REFDATA         = 3c279Template.dat \
                           sourcePop.dat \
                           testTemplate.dat \
                           test_image.fits
-
-include ${HD_STD_MAKEFILE}
