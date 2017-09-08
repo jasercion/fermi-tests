@@ -140,10 +140,12 @@ def ftdiff(f1, f2, **kwargs):
     # cmd = "ftdiff chatter=0 %s %s" % (f1, f2)
     for (kw, val) in kwargs.items():
         if val != "":
-            exclude = [val] if kw == 'exclude'
-            tolerance = val if kw == 'tolerance'
-            reltol = val if kw == 'reltol'
-
+		if kw == 'exclude':
+			exclude = [val]
+		if kw == 'tolerance':
+			tolerance = val
+		if kw == 'reltol':
+			reltol = val
     fd = fits.FITSDiff(f1, f2, ignore_keywords=exclude, rtol = reltol,
             atol = tolerance)
     return fd.identical
