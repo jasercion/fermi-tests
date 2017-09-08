@@ -1,10 +1,4 @@
-HD_COMPONENT_NAME       = glast
-
-HD_COMPONENT_VERS       =
-
-HD_REFDATA_SUBDIR       = fermi/pulsePhase/outref
-
-HD_TEST_REFDATA         = psrdb_summary.txt \
+dist_data_DATA 				=  psrdb_summary.txt \
                           testOrbitalPhaseApp_par1a.fits \
                           testOrbitalPhaseApp_par1b.fits \
                           testOrbitalPhaseApp_par1c.fits \
@@ -61,5 +55,3 @@ HD_TEST_REFDATA         = psrdb_summary.txt \
                           testPulsePhaseApp_par8.log \
                           testPulsePhaseApp_par9.fits \
                           testPulsePhaseApp_par9.log
-
-include ${HD_STD_MAKEFILE}
