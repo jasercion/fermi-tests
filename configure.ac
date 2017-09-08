@@ -67,6 +67,8 @@ AC_FUNC_MKTIME
 AC_CHECK_FUNCS([mkdir modf pow select sqrt])
 
 AC_CONFIG_FILES([Likelihood/Makefile
+		 Likelihood/data/Makefile
+		 Likelihood/data/outref/Makefile
                  Makefile
                  astro/Makefile
 		 astro/data/Makefile
