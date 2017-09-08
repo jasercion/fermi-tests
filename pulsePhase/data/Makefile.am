@@ -1,10 +1,6 @@
-HD_COMPONENT_NAME       = glast
+SUBDIRS = outref
 
-HD_COMPONENT_VERS       =
-
-HD_REFDATA_SUBDIR       = fermi/pulsePhase
-
-HD_TEST_REFDATA         = D1.fits \
+dist_data_DATA 				=   D1.fits \
                           master_pulsardb_v2.fits \
                           my_pulsar_events_2gti.fits \
                           my_pulsar_events_v3.fits \
@@ -32,5 +28,3 @@ HD_TEST_REFDATA         = D1.fits \
                           testpsrdb_spin_per.txt \
                           testscdata_1day.fits \
                           testscdata_1year.fits
-
-include ${HD_STD_MAKEFILE}
