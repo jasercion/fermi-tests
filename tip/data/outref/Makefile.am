@@ -1,10 +1,4 @@
-HD_COMPONENT_NAME       = glast
-
-HD_COMPONENT_VERS       =
-
-HD_REFDATA_SUBDIR       = fermi/tip/outref
-
-HD_TEST_REFDATA         = a1-copy.pha \
+dist_data_DATA		=       a1-copy.pha \
                           aeff_DC1-copy.fits \
                           created_image.fits \
                           created_table.fits \
@@ -22,5 +16,3 @@ HD_TEST_REFDATA         = a1-copy.pha \
                           tipfile-copy.fits \
                           tipfile.fits \
                           unsigned_int.fits
-
-include ${HD_STD_MAKEFILE}
