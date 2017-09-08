@@ -1,10 +1,4 @@
-HD_COMPONENT_NAME       = glast
-
-HD_COMPONENT_VERS       =
-
-HD_REFDATA_SUBDIR       = fermi/timeSystem/outref
-
-HD_TEST_REFDATA         = testTimeCorrectorApp_par1.fits \
+dist_data_DATA          = testTimeCorrectorApp_par1.fits \
                           testTimeCorrectorApp_par2.fits \
                           testTimeCorrectorApp_par3.log \
                           testTimeCorrectorApp_par3.ref \
@@ -14,5 +8,3 @@ HD_TEST_REFDATA         = testTimeCorrectorApp_par1.fits \
                           testTimeCorrectorApp_par5.ref \
                           testTimeCorrectorApp_par6.log \
                           testTimeCorrectorApp_par6.ref
-
-include ${HD_STD_MAKEFILE}
