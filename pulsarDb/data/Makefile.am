@@ -1,6 +1,5 @@
 SUBDIRS = outref
 dist_data_DATA 				=   PulsarDb.tpl \
-                          PulsarDb.tpl \
                           PulsarDb_orbital_bt.tpl \
                           PulsarDb_orbital_dd.tpl \
                           PulsarDb_orbital_ell1.tpl \
