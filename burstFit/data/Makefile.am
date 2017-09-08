@@ -1,10 +1,4 @@
-HD_COMPONENT_NAME       = glast
-
-HD_COMPONENT_VERS       =
-
-HD_REFDATA_SUBDIR       = fermi/burstFit
-
-HD_TEST_REFDATA         = binData1039.fits \
+dist_data_DATA          = binData1039.fits \
                           binData1406.fits \
                           binData2193.fits \
                           binData2197.fits \
@@ -22,5 +16,3 @@ HD_TEST_REFDATA         = binData1039.fits \
                           binData764.fits \
                           ft1tiny.fits \
                           n0_p05.lc
-
-include ${HD_STD_MAKEFILE}
