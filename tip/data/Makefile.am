@@ -1,5 +1,5 @@
 SUBDIRS = outref
-data_DATA		= a1.pha \
+dist_data_DATA		= a1.pha \
                           aeff_DC1.fits \
                           arlac.pha \
                           ft1.tpl \
