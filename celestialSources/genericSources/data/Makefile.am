@@ -1,6 +1,6 @@
 SUBDIRS = outref
 
-dist_data_DATA =       = 3c279Template.dat \
+dist_data_DATA        = 3c279Template.dat \
                           CrabTemplate.dat \
                           GemingaTemplate.dat \
                           dm120gev.dat \
