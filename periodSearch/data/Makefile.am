@@ -1,12 +1,5 @@
-HD_COMPONENT_NAME       = glast
-
-HD_COMPONENT_VERS       =
-
-HD_INSTALL_REFDATA      = period-search-out.tpl
-
-HD_REFDATA_SUBDIR       = fermi/periodSearch
-
-HD_TEST_REFDATA         = ft1tiny.fits \
+SUBDIRS = outref
+dist_data_DATA 				=  ft1tiny.fits \
                           groD4-dc2v3.fits \
                           groD4-dc2v4.fits \
                           master_pulsardb_v2.fits \
@@ -30,5 +23,3 @@ HD_TEST_REFDATA         = ft1tiny.fits \
                           testevdata_1day_2gti.fits \
                           testevdata_1day_psearch.fits \
                           step-01.fits
-
-include ${HD_STD_MAKEFILE}
