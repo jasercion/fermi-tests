@@ -34,14 +34,14 @@ import sys
 logFile = "ST-unit-test.log"
 
 # Path to reference data.
-refdata_path = sep.join([environ["FERMI_DIR"], "refdata", "fermi"])
-
+#refdata_path = sep.join([environ["FERMI_DIR"], "refdata", "fermi"])
+refdata_path = "/root/anaconda2/share"
 # Path to test script data.
-test_data_path = sep.join([refdata_path, "test-scripts"])
-
+#test_data_path = sep.join([refdata_path, "test-scripts"])
+test_data_path = "/root/anaconda2/share"
 # Path to test script output reference data.
-test_outref_path = sep.join([test_data_path, "outref"])
-
+#test_outref_path = sep.join([test_data_path, "outref"])
+test_outref_path = "/root/anaconda2/share"
 # Constants to specify status codes for test pass and fail.
 OK = 0
 FAIL = 1
