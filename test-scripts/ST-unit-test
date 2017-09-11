@@ -1597,8 +1597,9 @@ if __name__ == "__main__":
 
     # Prepend the syspfiles directory from the ScienceTools
     # installation to the PFILES path.
-    environ['PFILES'] = environ['FERMI_DIR'] + '/syspfiles' + ':' + \
-                        environ['PFILES']
+    #environ['PFILES'] = environ['FERMI_DIR'] + '/syspfiles' + ':' + \
+    #                    environ['PFILES']
+    environ['PFILES'] = '/root/anaconda2/syspfiles'
 
     # Fetch the test start time.
     tStart = times()[4]
