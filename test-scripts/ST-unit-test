@@ -35,13 +35,13 @@ logFile = "ST-unit-test.log"
 
 # Path to reference data.
 #refdata_path = sep.join([environ["FERMI_DIR"], "refdata", "fermi"])
-refdata_path = "/root/anaconda2/share"
+refdata_path = sep.joint([environ["CONDA_PREFIX"], "share"])
 # Path to test script data.
 #test_data_path = sep.join([refdata_path, "test-scripts"])
-test_data_path = "/root/anaconda2/share"
+test_data_path = sep.joint([environ["CONDA_PREFIX"], "share"])
 # Path to test script output reference data.
 #test_outref_path = sep.join([test_data_path, "outref"])
-test_outref_path = "/root/anaconda2/share"
+test_outref_path = sep.joint([environ["CONDA_PREFIX"], "share"])
 # Constants to specify status codes for test pass and fail.
 OK = 0
 FAIL = 1
@@ -1599,7 +1599,7 @@ if __name__ == "__main__":
     # installation to the PFILES path.
     #environ['PFILES'] = environ['FERMI_DIR'] + '/syspfiles' + ':' + \
     #                    environ['PFILES']
-    environ['PFILES'] = '/root/anaconda2/syspfiles'
+    environ['PFILES'] = sep.joint([environ["CONDA_PREFIX"], "share"])
 
     # Fetch the test start time.
     tStart = times()[4]
