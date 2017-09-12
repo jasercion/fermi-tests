@@ -41,7 +41,7 @@ refdata_path = sep.join([environ["CONDA_PREFIX"], "refdata", "fermi"])
 test_data_path = sep.join([refdata_path, "test-scripts"])
 # Path to test script output reference data.
 #test_outref_path = sep.join([test_data_path, "outref"])
-test_outref_path = sep.join(test_data_path, "outref"])
+test_outref_path = sep.join([test_data_path, "outref"])
 # Constants to specify status codes for test pass and fail.
 OK = 0
 FAIL = 1
