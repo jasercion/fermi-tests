@@ -35,13 +35,13 @@ logFile = "ST-unit-test.log"
 
 # Path to reference data.
 #refdata_path = sep.join([environ["FERMI_DIR"], "refdata", "fermi"])
-refdata_path = sep.join([environ["CONDA_PREFIX"], "share"])
+refdata_path = sep.join([environ["CONDA_PREFIX"], "refdata", "fermi"])
 # Path to test script data.
 #test_data_path = sep.join([refdata_path, "test-scripts"])
-test_data_path = sep.join([environ["CONDA_PREFIX"], "share"])
+test_data_path = sep.join([refdata_path, "test-scripts"])
 # Path to test script output reference data.
 #test_outref_path = sep.join([test_data_path, "outref"])
-test_outref_path = sep.join([environ["CONDA_PREFIX"], "share"])
+test_outref_path = sep.join(test_data_path, "outref"])
 # Constants to specify status codes for test pass and fail.
 OK = 0
 FAIL = 1
@@ -1165,8 +1165,8 @@ unitTestsWithRoot = [
       "name" : "test_env" },
     { "cmd"  : "test_time", # Test facilities package
       "name" : "test_time" },
-    { "cmd"  : "testUtil", # Test facilities package
-      "name" : "testUtil" },
+    { "cmd"  : "test_Util", # Test facilities package
+      "name" : "test_Util" },
     { "cmd"  : "test_tip", # Test tip package
       "name" : "test_tip" },
     { "cmd"  : check_test_tip_output, # Test tip package
@@ -1599,7 +1599,7 @@ if __name__ == "__main__":
     # installation to the PFILES path.
     #environ['PFILES'] = environ['FERMI_DIR'] + '/syspfiles' + ':' + \
     #                    environ['PFILES']
-    environ['PFILES'] = sep.join([environ["CONDA_PREFIX"], "share"])
+    environ['PFILES'] = environ['CONDA_PREFIX'] + '/syspfiles'
 
     # Fetch the test start time.
     tStart = times()[4]
