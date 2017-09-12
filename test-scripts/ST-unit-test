@@ -1343,8 +1343,8 @@ unitTestsWithoutRoot = [
       "name" : "test_env" },
     { "cmd"  : "test_time", # Test facilities package
       "name" : "test_time" },
-    { "cmd"  : "testUtil", # Test facilities package
-      "name" : "testUtil" },
+    { "cmd"  : "test_Util", # Test facilities package
+      "name" : "test_Util" },
     { "cmd"  : "test_tip", # Test tip package
       "name" : "test_tip" },
     { "cmd"  : check_test_tip_output, # Test tip package
