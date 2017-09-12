@@ -1599,7 +1599,7 @@ if __name__ == "__main__":
     # installation to the PFILES path.
     #environ['PFILES'] = environ['FERMI_DIR'] + '/syspfiles' + ':' + \
     #                    environ['PFILES']
-    environ['PFILES'] = sep.joint([environ["CONDA_PREFIX"], "share"])
+    environ['PFILES'] = sep.join([environ["CONDA_PREFIX"], "share"])
 
     # Fetch the test start time.
     tStart = times()[4]
